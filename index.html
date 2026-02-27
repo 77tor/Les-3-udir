@@ -43,13 +43,61 @@
         .word-input { width: 100%; padding: 15px; font-size: 1.5rem; border: 3px solid #3498db; border-radius: 10px; text-align: center; }
         
         /* Navigasjon */
-        .nav-footer { position: fixed; bottom: 0; left: 0; width: 100%; background: white; padding: 15px 10px; box-shadow: 0 -4px 15px rgba(0,0,0,0.1); z-index: 1000; }
-        .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
-        .dots-container { display: flex; justify-content: center; gap: 8px; flex-grow: 1; flex-wrap: wrap; }
-        .dot { width: 35px; height: 35px; border-radius: 50%; border: 1px solid #ccc; display: flex; align-items: center; justify-content: center; cursor: pointer; background: white; font-weight: bold; }
+/* Navigasjon - Justert for iPad/Smalere skjermer */
+.nav-footer { 
+    position: fixed; 
+    bottom: 0; 
+    left: 0; 
+    width: 100%; 
+    background: white; 
+    padding: 10px 5px; /* Redusert padding på sidene */
+    box-shadow: 0 -4px 15px rgba(0,0,0,0.1); 
+    z-index: 1000; 
+}
+
+.nav-inner { 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; /* Sentrerer alt innhold */
+    gap: 10px; /* Mindre mellomrom mellom knapper og tall */
+}
+
+.dots-container { 
+    display: flex; 
+    justify-content: center; 
+    gap: 4px; /* Tettere mellomrom mellom tallene */
+    flex-wrap: nowrap; /* Tvinger dem til å prøve å stå på én linje */
+}
+
+.dot { 
+    width: 30px; /* Litt mindre sirkler (fra 35px) */
+    height: 30px; 
+    border-radius: 50%; 
+    border: 1px solid #ccc; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    cursor: pointer; 
+    background: white; 
+    font-weight: bold; 
+    font-size: 0.9rem; /* Litt mindre tekst */
+    flex-shrink: 1; /* Lar sirklene krympe litt hvis nødvendig */
+}
+
+.btn-nav { 
+    padding: 10px 15px; /* Litt smalere knapper */
+    cursor: pointer; 
+    border: none; 
+    border-radius: 8px; 
+    color: white; 
+    min-width: 80px; /* Redusert min-bredde */
+    font-weight: bold; 
+    font-size: 0.9rem;
+}
         .dot.active { background: #3498db; color: white; border-color: #2980b9; }
         .dot.completed { background: #ecf0f1; border-color: #7f8c8d; }
-        .btn-nav { padding: 12px 20px; cursor: pointer; border: none; border-radius: 8px; color: white; min-width: 100px; font-weight: bold; }
         #prevBtn { background: #95a5a6; }
         #nextBtn { background: #2ecc71; }
 
